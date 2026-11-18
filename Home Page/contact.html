@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | YÖRE</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Poppins:wght@400;500;600&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --dark-green: #244B35;
+            --light-green: #B6D3A7;
+            --cream: #F5F3F0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--cream);
+            color: var(--dark-green);
+        }
+
+        h1, h2, .navbar-brand {
+            font-family: 'Baloo 2', sans-serif;
+        }
+
+        .navbar {
+            background-color: var(--cream);
+        }
+
+        .navbar-brand {
+            color: var(--dark-green);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .nav-link {
+            color: var(--dark-green);
+            font-weight: 500;
+        }
+
+        .nav-link:hover,
+        .nav-link:focus {
+            color: #507A5D;
+            text-decoration: underline;
+        }
+
+        .contact-section {
+            padding: 70px 0;
+        }
+
+        .contact-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        .form-control {
+            border: 1px solid #8A9D8C;
+            border-radius: 8px;
+            padding: 12px;
+        }
+
+        .form-control:focus {
+            border-color: var(--dark-green);
+            box-shadow: 0 0 0 3px rgba(36, 75, 53, 0.2);
+        }
+
+        .form-label {
+            font-weight: 600;
+        }
+
+        .send-button {
+            background-color: var(--dark-green);
+            color: white;
+            border: none;
+            padding: 13px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .send-button:hover {
+            background-color: #3B694B;
+            color: white;
+        }
+
+        .info-panel {
+            background-color: var(--light-green);
+            border-radius: 16px;
+            padding: 35px;
+            height: 100%;
+        }
+
+        .info-panel h2 {
+            font-weight: 700;
+        }
+
+        footer {
+            background-color: var(--dark-green);
+            color: white;
+            padding: 35px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        footer a:hover,
+        footer a:focus {
+            text-decoration: underline;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #507A5D;
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-section {
+                padding: 40px 15px;
+            }
+
+            .contact-title {
+                font-size: 2.5rem;
+            }
+
+            .info-panel {
+                margin-top: 25px;
+            }
+
+            footer a {
+                display: inline-block;
+                margin: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">YÖRE</a>
+
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#products">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="privacy.html">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <h1 class="contact-title text-center mb-5">Let's talk.</h1>
+
+                <div class="row g-4 align-items-stretch">
+
+                    <!-- Contact Form -->
+                    <div class="col-lg-7">
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control"
+                                    id="fullName" name="fullName"
+                                    autocomplete="name" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control"
+                                    id="email" name="email"
+                                    autocomplete="email" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control"
+                                    id="subject" name="subject" required>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control"
+                                    id="message" name="message"
+                                    rows="5" required></textarea>
+                            </div>
+
+                            <button type="submit" class="send-button">
+                                Send Message
+                            </button>
+
+                            <p id="formFeedback" class="mt-3"
+                                role="status" aria-live="polite"></p>
+                        </form>
+                    </div>
+
+                    <!-- Information Panel -->
+                    <div class="col-lg-5">
+                        <aside class="info-panel">
+                            <h2>We'd love to hear from you!</h2>
+                            <p class="mt-3">
+                                Have a question about our products, orders,
+                                or collections? Send us a message and
+                                we'll be happy to hear from you.
+                            </p>
+
+                            <h3 class="h5 mt-4">Get in touch</h3>
+                            <p>
+                                Email:
+                                <a href="mailto:hello@examplewebsite142.com">
+                                    hello@examplewebsite142.com
+                                </a>
+                            </p>
+
+                            <p class="mt-4">
+                                Thank you for being part of YÖRE.
+                                Wear It Your Way.
+                            </p>
+                        </aside>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container d-flex flex-column flex-md-row
+            justify-content-between align-items-center text-center">
+            <div>
+                <h2 class="h3">YÖRE</h2>
+                <p class="mb-0">Wear It Your Way.</p>
+            </div>
+
+            <nav aria-label="Footer navigation" class="mt-3 mt-md-0">
+                <a href="index.html">Home</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript Method #2: Open Email Application -->
+    <script>
+        const contactForm = document.getElementById("contactForm");
+        const formFeedback = document.getElementById("formFeedback");
+
+        contactForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            if (!contactForm.checkValidity()) {
+                contactForm.reportValidity();
+                return;
+            }
+
+            const fullName = document.getElementById("fullName").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const subject = document.getElementById("subject").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            const emailSubject = encodeURIComponent(subject);
+            const emailBody = encodeURIComponent(
+                "Name: " + fullName +
+                "\nEmail: " + email +
+                "\n\nMessage:\n" + message
+            );
+
+            const mailtoLink =
+                "mailto:hello@examplewebsite142.com" +
+                "?subject=" + emailSubject +
+                "&body=" + emailBody;
+
+            formFeedback.textContent =
+                "Your email application should open with your message prepared.";
+
+            window.location.href = mailtoLink;
+        });
+    </script>
+
+</body>
+</html>
