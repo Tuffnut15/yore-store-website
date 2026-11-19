@@ -1,0 +1,1226 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+        name="description"
+        content="Shop the Don't Be Late Tee from YORE."
+    >
+    <title>Don't Be Late Tee | YORE</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Kalam&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        :root {
+            --green: #244b35;
+            --sage: #b6d3a7;
+            --pale-green: #e5eee1;
+            --background: #f5f3f0;
+            --accent: #d9c9b4;
+            --text: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--background);
+            color: var(--text);
+            font-family: "Poppins", Arial, sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .brand-name,
+        .price {
+            font-family: "Baloo 2", sans-serif;
+        }
+
+        :focus-visible {
+            outline: 3px solid #6f9a75;
+            outline-offset: 3px;
+        }
+
+        .site-header {
+            background: #ffffff;
+            border-bottom: 1px solid #d9ded7;
+        }
+
+        .navbar {
+            min-height: 76px;
+        }
+
+        .brand-lockup {
+            text-decoration: none;
+            line-height: 0.85;
+        }
+
+        .brand-name {
+            display: block;
+            color: var(--green);
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .brand-tagline {
+            display: block;
+            color: var(--green);
+            font-family: "Kalam", cursive;
+            font-size: 0.65rem;
+            text-align: center;
+        }
+
+        .nav-link {
+            padding: 0.65rem 0.9rem !important;
+            color: var(--text) !important;
+            font-size: 0.88rem;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--green) !important;
+            font-weight: 700;
+        }
+
+        .product-page {
+            padding: 1.1rem 0;
+        }
+
+        .breadcrumb {
+            margin-bottom: 1.15rem;
+            font-size: 0.78rem;
+        }
+
+        .breadcrumb a {
+            color: var(--green);
+            text-decoration: none;
+        }
+
+        .product-gallery {
+            display: grid;
+            grid-template-columns: 82px minmax(0, 1fr);
+            align-items: center;
+            gap: 14px;
+        }
+
+        .thumbnail-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .thumbnail-button {
+            width: 82px;
+            height: 82px;
+            padding: 5px;
+            overflow: hidden;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            background: #252525;
+            cursor: pointer;
+        }
+
+        .thumbnail-button.active {
+            border-color: var(--green);
+            background: var(--pale-green);
+        }
+
+        .thumbnail-button img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 14px;
+            object-fit: contain;
+        }
+
+        .main-image-panel {
+            display: flex;
+            min-height: 400px;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            border-radius: 24px;
+            background: var(--pale-green);
+        }
+
+        .main-image-panel img {
+            display: block;
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+        }
+
+        .product-info {
+            padding: 0.35rem 0 0 0.35rem;
+        }
+
+        .product-title {
+            margin: 0;
+            color: var(--green);
+            font-size: clamp(2rem, 3.2vw, 2.65rem);
+            font-weight: 800;
+            line-height: 1.05;
+        }
+
+        .product-type {
+            margin: 0.1rem 0 0;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .price {
+            margin: 0;
+            color: var(--green);
+            font-size: 2.45rem;
+            font-weight: 800;
+            line-height: 1.15;
+        }
+
+        .summary {
+            max-width: 480px;
+            margin: 0.1rem 0 0.65rem;
+            font-size: 0.88rem;
+            line-height: 1.55;
+        }
+
+        .product-divider {
+            margin: 0.65rem 0 0.8rem;
+            border: 0;
+            border-top: 1px solid var(--green);
+            opacity: 0.75;
+        }
+
+        .field-label {
+            display: block;
+            margin-bottom: 0.45rem;
+            color: var(--green);
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .size-choice input {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .size-choice span {
+            display: inline-flex;
+            min-width: 49px;
+            min-height: 42px;
+            align-items: center;
+            justify-content: center;
+            padding: 0.45rem 0.7rem;
+            border: 1px solid #cbd4c9;
+            border-radius: 10px;
+            background: #ffffff;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .size-choice input:checked + span {
+            border: 2px solid var(--green);
+            background: var(--pale-green);
+            color: var(--green);
+        }
+
+        .size-choice input:focus-visible + span {
+            outline: 3px solid var(--sage);
+            outline-offset: 3px;
+        }
+
+        .quantity {
+            display: inline-flex;
+            min-width: 143px;
+            min-height: 42px;
+            align-items: center;
+            overflow: hidden;
+            border: 1px solid #cbd4c9;
+            border-radius: 9px;
+            background: #ffffff;
+        }
+
+        .quantity button {
+            width: 45px;
+            height: 40px;
+            border: 0;
+            background: transparent;
+            color: var(--green);
+            font-size: 1.1rem;
+        }
+
+        .quantity button:hover {
+            background: var(--pale-green);
+        }
+
+        .quantity output {
+            flex: 1;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 1.2rem;
+        }
+
+        .order,
+        .other {
+            flex: 1 1 175px;
+            min-height: 48px;
+            padding: 0.7rem 1rem;
+            border-radius: 28px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .order {
+            border: 0;
+            background: var(--green);
+            color: #ffffff;
+        }
+
+        .order:hover {
+            background: #183b28;
+            color: #ffffff;
+        }
+
+        .other {
+            border: 1px solid var(--green);
+            background: var(--sage);
+            color: var(--green);
+            font-weight: 500;
+        }
+
+        .other:hover {
+            background: #a5c696;
+            color: var(--green);
+        }
+
+        .note {
+            margin: 0.8rem 0 0;
+            color: #777777;
+            font-size: 0.72rem;
+        }
+
+        .feedback {
+            min-height: 1.2rem;
+            margin: 0.3rem 0 0;
+            font-size: 0.8rem;
+        }
+
+        .info-card {
+            min-height: 116px;
+            height: 100%;
+            padding: 1.15rem 1.5rem;
+            border-radius: 16px;
+            background: #e1ecdd;
+        }
+
+        .info-card h2 {
+            margin-bottom: 0.35rem;
+            color: var(--green);
+            font-size: 1.35rem;
+            font-weight: 800;
+        }
+
+        .info-card p {
+            margin-bottom: 0.25rem;
+            font-size: 0.86rem;
+            line-height: 1.6;
+        }
+
+        .details-divider {
+            border-left: 1px solid #6b9878;
+        }
+
+        .help-link {
+            color: var(--green);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .help-link:hover {
+            text-decoration: underline;
+        }
+
+        .site-footer {
+            padding: 1.35rem 0;
+            background: var(--green);
+            color: #ffffff;
+        }
+
+        .footer-brand {
+            color: #ffffff;
+            font-family: "Baloo 2", sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .footer-tagline {
+            font-family: "Kalam", cursive;
+            font-size: 0.72rem;
+        }
+
+        .footer-links a {
+            display: inline-block;
+            margin: 0.25rem 0.8rem;
+            color: #ffffff;
+            font-size: 0.78rem;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 767.98px) {
+            .navbar {
+                min-height: 66px;
+            }
+
+            .product-page {
+                padding: 0.9rem 0;
+            }
+
+            .product-gallery {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .thumbnail-list {
+                order: 2;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .thumbnail-button {
+                width: 68px;
+                height: 68px;
+                border-radius: 16px;
+            }
+
+            .main-image-panel {
+                min-height: 310px;
+                max-height: 390px;
+                padding: 1rem;
+                border-radius: 20px;
+            }
+
+            .main-image-panel img {
+                max-height: 350px;
+            }
+
+            .product-info {
+                padding: 0.5rem 0 0;
+            }
+
+            .product-title {
+                font-size: 2.15rem;
+            }
+
+            .price {
+                font-size: 2.2rem;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+
+            .order,
+            .other {
+                width: 100%;
+            }
+
+            .info-card {
+                padding: 1rem 1.15rem;
+            }
+
+            .details-divider {
+                margin-top: 0.5rem;
+                padding-top: 0.7rem;
+                border-top: 1px solid #6b9878;
+                border-left: 0;
+            }
+
+            .footer-links {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .thumbnail-button {
+                width: 60px;
+                height: 60px;
+            }
+
+            .size-choice span {
+                min-width: 44px;
+            }
+        }
+    </style>
+
+    <style>
+        /* MOBILE LAYOUT — keeps the desktop design unchanged */
+        @media (max-width: 767.98px) {
+            body {
+                overflow-x: hidden;
+            }
+
+            .site-header .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .navbar {
+                min-height: 58px;
+                padding-top: 0.35rem;
+                padding-bottom: 0.35rem;
+            }
+
+            .brand-name {
+                font-size: 1.65rem;
+            }
+
+            .brand-tagline {
+                font-size: 0.55rem;
+            }
+
+            .navbar-toggler {
+                padding: 0.25rem 0.4rem;
+                border: 0;
+                box-shadow: none !important;
+            }
+
+            .navbar-collapse {
+                padding: 0.4rem 0 0.65rem;
+            }
+
+            .navbar-nav {
+                align-items: stretch !important;
+            }
+
+            .nav-link {
+                padding: 0.45rem 0 !important;
+            }
+
+            main.container-fluid {
+                padding-left: 0.8rem !important;
+                padding-right: 0.8rem !important;
+            }
+
+            .product-page {
+                padding: 0.65rem 0 0.9rem;
+            }
+
+            .breadcrumb {
+                margin-bottom: 0.55rem;
+                font-size: 0.62rem;
+            }
+
+            .product-page .row.g-4 {
+                --bs-gutter-x: 0;
+                --bs-gutter-y: 0.8rem;
+            }
+
+            .product-page .col-lg-6 {
+                width: 100%;
+            }
+
+            /* Product image first, with compact image selectors underneath */
+            .product-gallery {
+                display: flex;
+                flex-direction: column;
+                gap: 0.45rem;
+                width: 100%;
+            }
+
+            .main-image-panel {
+                order: 1;
+                width: 100%;
+                min-height: 0;
+                height: clamp(210px, 55vw, 285px);
+                max-height: 285px;
+                padding: 0.65rem;
+                border-radius: 15px;
+            }
+
+            .main-image-panel img {
+                width: 100%;
+                height: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+
+            .thumbnail-list {
+                order: 2;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 0.35rem;
+                width: 100%;
+            }
+
+            .thumbnail-button {
+                width: 25px;
+                height: 5px;
+                min-width: 25px;
+                padding: 0;
+                border: 0;
+                border-radius: 99px;
+                background: #cbd8c7;
+            }
+
+            .thumbnail-button img {
+                display: none;
+            }
+
+            .thumbnail-button.active {
+                width: 38px;
+                height: 5px;
+                border: 0;
+                background: var(--green);
+            }
+
+            /* Product information is stacked below the image */
+            .product-info {
+                padding: 0.35rem 0 0;
+            }
+
+            .product-title {
+                font-size: 1.75rem;
+                line-height: 1.05;
+            }
+
+            .product-type {
+                margin-top: 0;
+                font-size: 1rem;
+            }
+
+            .price {
+                font-size: 1.8rem;
+                line-height: 1.05;
+            }
+
+            .summary {
+                max-width: none;
+                margin: 0.25rem 0 0.5rem;
+                font-size: 0.69rem;
+                line-height: 1.45;
+            }
+
+            .product-divider {
+                margin: 0.5rem 0 0.6rem;
+            }
+
+            .field-label {
+                margin-bottom: 0.35rem;
+                font-size: 0.7rem;
+            }
+
+            .product-info fieldset {
+                margin-bottom: 0.65rem !important;
+            }
+
+            .product-info fieldset > div {
+                display: grid !important;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 0.4rem !important;
+            }
+
+            .size-choice {
+                display: block;
+                width: 100%;
+            }
+
+            .size-choice span {
+                display: flex;
+                width: 100%;
+                min-width: 0;
+                min-height: 34px;
+                justify-content: center;
+                align-items: center;
+                padding: 0.3rem;
+                border-radius: 8px;
+                font-size: 0.7rem;
+            }
+
+            .product-info > div.mb-3 {
+                margin-bottom: 0.55rem !important;
+            }
+
+            .quantity {
+                min-width: 0;
+                width: 100%;
+                max-width: 145px;
+                min-height: 34px;
+            }
+
+            .quantity button {
+                width: 38px;
+                height: 32px;
+                font-size: 0.95rem;
+            }
+
+            .quantity output {
+                font-size: 0.75rem;
+            }
+
+            .actions {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 0.45rem;
+                margin-top: 0.65rem;
+            }
+
+            .order,
+            .other {
+                display: flex;
+                width: 100%;
+                min-height: 38px;
+                flex: none;
+                justify-content: center;
+                align-items: center;
+                padding: 0.55rem 0.8rem;
+                border-radius: 22px;
+                font-size: 0.72rem;
+            }
+
+            .note {
+                margin-top: 0.45rem;
+                font-size: 0.58rem;
+            }
+
+            .feedback {
+                font-size: 0.68rem;
+            }
+
+            /* Help card and product details */
+            .product-page section.row.g-3 {
+                --bs-gutter-x: 0;
+                --bs-gutter-y: 0.65rem;
+                margin-top: 0.6rem !important;
+                margin-bottom: 0.3rem !important;
+            }
+
+            .info-card {
+                min-height: 0;
+                padding: 0.8rem 0.9rem;
+                border-radius: 12px;
+            }
+
+            .info-card h2 {
+                margin-bottom: 0.25rem;
+                font-size: 1rem;
+            }
+
+            .info-card p {
+                margin-bottom: 0.15rem;
+                font-size: 0.66rem;
+                line-height: 1.45;
+            }
+
+            .details-divider {
+                margin-top: 0.35rem;
+                padding-top: 0.35rem;
+                border-top: 1px solid #6b9878;
+                border-left: 0;
+            }
+
+            .help-link {
+                font-size: 0.68rem;
+            }
+
+            /* Compact mobile footer */
+            .site-footer {
+                padding: 0.75rem 0;
+            }
+
+            .site-footer .container-fluid {
+                padding-left: 0.9rem !important;
+                padding-right: 0.9rem !important;
+            }
+
+            .footer-brand {
+                font-size: 1.5rem;
+            }
+
+            .footer-tagline {
+                font-size: 0.58rem;
+            }
+
+            .site-footer small {
+                margin-top: 0.25rem !important;
+                font-size: 0.52rem;
+            }
+
+            .footer-links {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.1rem 0.35rem;
+                text-align: center !important;
+            }
+
+            .footer-links a {
+                margin: 0.1rem 0;
+                font-size: 0.58rem;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .main-image-panel {
+                height: 215px;
+            }
+
+            .product-title {
+                font-size: 1.6rem;
+            }
+
+            .size-choice span {
+                min-height: 32px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md" aria-label="Main navigation">
+            <div class="container">
+                <a
+                    class="brand-lockup navbar-brand"
+                    href="index.html"
+                    aria-label="YORE home"
+                >
+                    <span class="brand-name">YORE</span>
+                    <span class="brand-tagline">Wear It Yore Way</span>
+                </a>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavigation"
+                    aria-controls="mainNavigation"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavigation">
+                    <ul class="navbar-nav ms-auto align-items-md-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                aria-current="page"
+                                href="index.html#collection"
+                            >
+                                Shop
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="mailto:hello@examplewebsite142.com"
+                            >
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid px-3 px-lg-4">
+        <div class="product-page">
+            <!-- Breadcrumb navigation -->
+            <nav aria-label="Breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="index.html">SHOP</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        PRODUCT DETAILS
+                    </li>
+                </ol>
+            </nav>
+
+            <section class="row g-4 align-items-start" aria-labelledby="product-name">
+                <!-- Product image gallery -->
+                <div class="col-lg-6">
+                    <div class="product-gallery">
+                        <div class="thumbnail-list" aria-label="Product image thumbnails">
+                            <button
+                                class="thumbnail-button active"
+                                type="button"
+                                data-image="Don’t Be Late Clover T-Shirt 2.png"
+                                data-alt="Front view of the black Don't Be Late Tee"
+                                aria-label="Show front view"
+                                aria-pressed="true"
+                            >
+                                <img
+                                    src="Don’t Be Late Clover T-Shirt 2.png"
+                                    alt="Front view of the black Don't Be Late Tee"
+                                >
+                            </button>
+
+                            <button
+                                class="thumbnail-button"
+                                type="button"
+                                data-image="Don’t Be Late Clover T-Shirt 3.png"
+                                data-alt="Close-up of the white lettering and green clover graphic"
+                                aria-label="Show design close-up"
+                                aria-pressed="false"
+                            >
+                                <img
+                                    src="Don’t Be Late Clover T-Shirt 3.png"
+                                    alt="lose-up of the white lettering and green clover graphic"
+                                >
+                            </button>
+
+                            <button
+                                class="thumbnail-button"
+                                type="button"
+                                data-image="Don’t Be Late Clover T-Shirt 4.png"
+                                data-alt="Close-up detail of the black T-shirt"
+                                aria-label="Show shirt detail"
+                                aria-pressed="false"
+                            >
+                                <img
+                                    src="Don’t Be Late Clover T-Shirt 4.png"
+                                    alt="Close-up detail of the black T-shirt"
+                                >
+                            </button>
+                        </div>
+
+                        <div class="main-image-panel">
+                            <img
+                                id="mainProductImage"
+                                src="Don’t Be Late Clover T-Shirt 1.png"
+                                alt="Black Don't Be Late Tee with white lettering and green clover graphic"
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product name, description, and ordering controls -->
+                <div class="col-lg-6">
+                    <div class="product-info">
+                        <h1 class="product-title" id="product-name">
+                            Don't Be Late Tee
+                        </h1>
+                        <p class="product-type">Black T-Shirt</p>
+                        <p class="price">₱499</p>
+
+                        <p class="summary">
+                            A comfortable everyday tee. A little reminder to show up,
+                            do your thing, and wear it your way. Made for everyday
+                            comfort and easy styling.
+                        </p>
+
+                        <hr class="product-divider">
+
+                        <!-- Customer selects one shirt size -->
+                        <fieldset class="mb-3">
+                            <legend class="field-label">Choose a size</legend>
+
+                            <div class="d-flex flex-wrap gap-2">
+                                <label class="size-choice">
+                                    <input type="radio" name="size" value="S">
+                                    <span>S</span>
+                                </label>
+
+                                <label class="size-choice">
+                                    <input type="radio" name="size" value="M">
+                                    <span>M</span>
+                                </label>
+
+                                <label class="size-choice">
+                                    <input type="radio" name="size" value="L">
+                                    <span>L</span>
+                                </label>
+
+                                <label class="size-choice">
+                                    <input type="radio" name="size" value="XL">
+                                    <span>XL</span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <!-- Quantity selector -->
+                        <div class="mb-3">
+                            <label class="field-label" for="quantityOutput">
+                                Quantity
+                            </label>
+
+                            <div class="quantity">
+                                <button
+                                    type="button"
+                                    id="decreaseQuantity"
+                                    aria-label="Decrease quantity"
+                                >
+                                    −
+                                </button>
+
+                                <output id="quantityOutput" aria-live="polite">1</output>
+
+                                <button
+                                    type="button"
+                                    id="increaseQuantity"
+                                    aria-label="Increase quantity"
+                                >
+                                    +
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Order and collection navigation buttons -->
+                        <div class="actions">
+                            <button
+                                type="button"
+                                class="order"
+                                id="orderButton"
+                            >
+                                Order Now
+                            </button>
+
+                            <a class="other" href="index.html#collection">
+                                ♧ &nbsp; View Other Shirts →
+                            </a>
+                        </div>
+
+                        <p class="note">
+                            No payment gateway — order availability by email.
+                        </p>
+
+                        <p
+                            id="orderMessage"
+                            class="feedback"
+                            role="status"
+                            aria-live="polite"
+                        ></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Product specifications and customer support -->
+            <section class="row g-3 g-lg-4 mt-2 mb-3">
+                <div class="col-lg-6">
+                    <div class="info-card">
+                        <h2>Product Details</h2>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <p>Color: Black</p>
+                                <p>Fit: Regular</p>
+                            </div>
+
+                            <div class="col-6 details-divider">
+                                <p>Sizes: S, M, L, XL</p>
+                                <p>Design: Clover graphic</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="info-card">
+                        <h2>Need Help Choosing?</h2>
+
+                        <p>
+                            Contact us for sizing or product questions before
+                            placing an order.
+                        </p>
+
+                        <p class="text-end mb-0">
+                            <a
+                                class="help-link"
+                                href="mailto:hello@examplewebsite142.com"
+                            >
+                                Contact →
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container-fluid px-4 px-lg-5">
+            <div class="row align-items-center gy-3">
+                <div class="col-md-5">
+                    <div class="footer-brand">YORE</div>
+                    <div class="footer-tagline">Wear It Yore Way.</div>
+                    <small class="d-block mt-2">
+                        © YORE · Wear It Yore Way.
+                    </small>
+                </div>
+
+                <div class="col-md-7">
+                    <nav
+                        class="footer-links text-md-end"
+                        aria-label="Footer navigation"
+                    >
+                        <a href="index.html">Home</a>
+                        <a href="index.html#collection">Shop</a>
+                        <a href="index.html#about">About</a>
+                        <a href="mailto:hello@examplewebsite142.com">Contact</a>
+                        <a href="privacy.html">Privacy</a>
+                        <a href="terms.html">Terms</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const mainImage = document.getElementById("mainProductImage");
+        const thumbnails = document.querySelectorAll(".thumbnail-button");
+
+        function changeProductImage(button) {
+            mainImage.src = button.dataset.image;
+            mainImage.alt = button.dataset.alt;
+
+            thumbnails.forEach((thumbnail) => {
+                thumbnail.classList.remove("active");
+                thumbnail.setAttribute("aria-pressed", "false");
+            });
+
+            button.classList.add("active");
+            button.setAttribute("aria-pressed", "true");
+        }
+
+        thumbnails.forEach((button) => {
+            button.addEventListener("click", () => {
+                changeProductImage(button);
+            });
+        });
+
+        let quantity = 1;
+
+        const quantityOutput = document.getElementById("quantityOutput");
+        const decreaseButton = document.getElementById("decreaseQuantity");
+        const increaseButton = document.getElementById("increaseQuantity");
+
+        function updateQuantity() {
+            quantityOutput.textContent = quantity;
+        }
+
+        function decreaseQuantity() {
+            if (quantity > 1) {
+                quantity -= 1;
+                updateQuantity();
+            }
+        }
+
+        function increaseQuantity() {
+            if (quantity < 99) {
+                quantity += 1;
+                updateQuantity();
+            }
+        }
+
+        decreaseButton.addEventListener("click", decreaseQuantity);
+        increaseButton.addEventListener("click", increaseQuantity);
+
+        const orderButton = document.getElementById("orderButton");
+        const orderMessage = document.getElementById("orderMessage");
+
+        function showOrderError(message) {
+            orderMessage.textContent = message;
+            orderMessage.style.color = "#a12626";
+        }
+
+        function createOrderEmail(selectedSize) {
+            const productName = "Don't Be Late Tee";
+            const unitPrice = 499;
+            const totalPrice = unitPrice * quantity;
+
+            const subject = `Order Request - ${productName}`;
+
+            const body = [
+                "Hello YORE,",
+                "",
+                "I would like to place an order with the following details:",
+                "",
+                `Product: ${productName}`,
+                "Color: Black",
+                "Fit: Regular",
+                `Size: ${selectedSize}`,
+                `Quantity: ${quantity}`,
+                `Unit Price: PHP ${unitPrice}`,
+                `Estimated Total: PHP ${totalPrice}`,
+                "",
+                "Please let me know the next steps. Thank you!"
+            ].join("\n");
+
+            const recipient = "orders@examplewebsite142.com";
+
+            return (
+                `mailto:${recipient}` +
+                `?subject=${encodeURIComponent(subject)}` +
+                `&body=${encodeURIComponent(body)}`
+            );
+        }
+
+        function handleOrder() {
+            const selectedSize = document.querySelector(
+                'input[name="size"]:checked'
+            );
+
+            // A size must be selected before an order email can be prepared.
+            if (!selectedSize) {
+                showOrderError("Please choose a size before placing your order.");
+                document.querySelector('input[name="size"]').focus();
+                return;
+            }
+
+            orderMessage.textContent = "";
+            orderMessage.style.color = "";
+
+            // Method #2: open the visitor's email application with a prefilled email.
+            window.location.href = createOrderEmail(selectedSize.value);
+        }
+
+        orderButton.addEventListener("click", handleOrder);
+    </script>
+</body>
+</html>
