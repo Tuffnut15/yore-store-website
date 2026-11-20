@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shop the Don't Be Late Tee from YORE.">
+  <title>YORE | Don't Be Late Tee</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-md" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand" href="index.html" aria-label="YORE home">
+          <img src="images/yore-logo.png" alt="YORE - Wear It Yore Way">
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-label="Open navigation menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="mainNav" aria-label="Site menu">
+          <div class="offcanvas-header">
+            <a class="navbar-brand" href="index.html" aria-label="YORE home">
+              <img src="images/yore-logo.png" alt="YORE - Wear It Your Way">
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                    aria-label="Close navigation menu"></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-md-auto">
+              <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="dont-be-late-tee.html#shop">Shop</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item d-md-none"><a class="nav-link" href="privacy.html">Privacy Policy</a></li>
+              <li class="nav-item d-md-none"><a class="nav-link" href="privacy.html#terms">Terms</a></li>
+            </ul>
+            <p class="drawer-tagline d-md-none">WEAR IT YORE WAY</p>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="product"
+        data-name="Don't Be Late Tee"
+        data-price="499"
+        data-color="Black"
+        data-fit="Regular">
+    <div class="product-page container">
+
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html#shop">Shop</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Product details</li>
+        </ol>
+      </nav>
+
+      <section class="row g-4 g-lg-5 align-items-start" aria-labelledby="product-name">
+
+        <div class="col-lg-6">
+          <div class="gallery-card">
+            <div class="main-image-panel">
+              <img id="mainProductImage" src="images/dont-be-late-tee.png"
+                   alt="Front view of the black Don't Be Late Tee">
+            </div>
+
+            <div class="gallery-footer">
+              <div class="thumbnail-list" aria-label="Product images">
+                <button class="thumbnail-button active" type="button"
+                        data-image="images/dont-be-late-tee.png"
+                        data-alt="Front view of the black Don't Be Late Tee"
+                        aria-label="Show image 1: front view" aria-pressed="true"></button>
+                <button class="thumbnail-button" type="button"
+                        data-image="images/close-up.png"
+                        data-alt="Close-up of the white lettering and green clover graphic"
+                        aria-label="Show image 2: design close-up" aria-pressed="false"></button>
+                <button class="thumbnail-button" type="button"
+                        data-image="images/close-up-detailed.png"
+                        data-alt="Close-up detail of the black T-shirt"
+                        aria-label="Show image 3: shirt detail" aria-pressed="false"></button>
+              </div>
+              <p class="image-counter" id="imageCounter" aria-live="polite">01 / 03</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="product-info-panel">
+            <p class="eyebrow">YORE EVERYDAY COLLECTION</p>
+            <h1 class="product-title" id="product-name">Don't Be Late Tee</h1>
+            <p class="product-price">₱499</p>
+
+            <p class="product-summary">
+              A comfortable everyday tee. A little reminder to show up,
+              do your thing, and wear it your way. Made for everyday
+              comfort and easy styling.
+            </p>
+
+            <fieldset class="field-group">
+              <legend class="field-label">Choose a size</legend>
+              <div class="d-flex flex-wrap gap-2">
+                <label class="size-choice"><input type="radio" name="size" value="S" checked><span>S</span></label>
+                <label class="size-choice"><input type="radio" name="size" value="M"><span>M</span></label>
+                <label class="size-choice"><input type="radio" name="size" value="L"><span>L</span></label>
+                <label class="size-choice"><input type="radio" name="size" value="XL"><span>XL</span></label>
+              </div>
+            </fieldset>
+
+            <div class="field-group">
+              <label class="field-label" for="quantityOutput">Quantity</label>
+              <div class="quantity">
+                <button type="button" id="decreaseQuantity" aria-label="Decrease quantity">−</button>
+                <output id="quantityOutput" aria-live="polite">1</output>
+                <button type="button" id="increaseQuantity" aria-label="Increase quantity">+</button>
+              </div>
+            </div>
+
+            <div class="product-actions d-flex flex-wrap gap-3">
+              <button type="button" class="btn btn-yore btn-yore-dark rounded-pill" id="orderButton">Order now</button>
+              <button type="button" class="btn btn-yore btn-yore-light rounded-pill"
+                      data-bs-toggle="modal" data-bs-target="#otherShirtsModal">
+              <svg class="btn-icon" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+                <path d="M8 3 3 6l2 4 3-1v12h8V9l3 1 2-4-5-3a4 4 0 0 1-8 0Z"/>
+              </svg>
+              View other shirts →
+              </button>
+            </div>
+
+            <p class="product-note">No payment gateway — order availability by email.</p>
+            <p id="orderMessage" class="order-feedback" role="status" aria-live="polite"></p>
+
+            <aside class="help-bar" aria-label="Sizing help">
+              <span class="help-icon" aria-hidden="true">☘</span>
+              <div class="help-text">
+                <strong>Need help choosing?</strong>
+                <span>Contact us for sizing or product questions before placing an order.</span>
+              </div>
+              <a class="help-link" href="mailto:hello@examplewebsite142.com">Contact<span class="visually-hidden"> us by email about sizing</span> →</a>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="modal fade" id="otherShirtsModal" tabindex="-1"
+     aria-labelledby="otherShirtsTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content shirts-modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="otherShirtsTitle">More from YORE</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <a class="shirt-option" href="everyday-comfort.html">
+          <span class="shirt-thumb"><img src="images/comfort-tee.png" alt=""></span>
+          <span class="shirt-meta">
+            <strong>Comfort Tee</strong>
+            <small>₱499</small>
+          </span>
+          <span class="shirt-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a class="shirt-option" href="do-good-work.html">
+          <span class="shirt-thumb"><img src="images/do-good-work-tee.png" alt=""></span>
+          <span class="shirt-meta">
+            <strong>Do Good Work Tee</strong>
+            <small>₱499</small>
+          </span>
+          <span class="shirt-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="footer-logo" href="index.html" aria-label="YORE home">
+          <img src="images/yore-logo-white.png" alt="YORE - Wear It Your Way">
+        </a>
+        <small>© YORE · Wear it Yore way.</small>
+      </div>
+
+      <nav aria-label="Footer navigation">
+        <ul class="footer-links list-unstyled mb-0">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#shop">Shop</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="privacy.html#terms">Terms</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const mainNav = document.getElementById("mainNav");
+
+    mainNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        const drawer = bootstrap.Offcanvas.getInstance(mainNav);
+        if (drawer) {
+          drawer.hide();
+        }
+      });
+    });
+
+    const mainImage = document.getElementById("mainProductImage");
+    const thumbnails = document.querySelectorAll(".thumbnail-button");
+    const imageCounter = document.getElementById("imageCounter");
+
+    function changeProductImage(button) {
+      mainImage.src = button.dataset.image;
+      mainImage.alt = button.dataset.alt;
+
+      thumbnails.forEach((thumbnail) => {
+        thumbnail.classList.remove("active");
+        thumbnail.setAttribute("aria-pressed", "false");
+      });
+
+      button.classList.add("active");
+      button.setAttribute("aria-pressed", "true");
+
+      const position = Array.from(thumbnails).indexOf(button) + 1;
+      imageCounter.textContent = `0${position} / 0${thumbnails.length}`;
+    }
+
+    thumbnails.forEach((button) => {
+      button.addEventListener("click", () => changeProductImage(button));
+    });
+
+    let quantity = 1;
+
+    const quantityOutput = document.getElementById("quantityOutput");
+    const decreaseButton = document.getElementById("decreaseQuantity");
+    const increaseButton = document.getElementById("increaseQuantity");
+
+    function updateQuantity() {
+      quantityOutput.textContent = quantity;
+    }
+
+    decreaseButton.addEventListener("click", () => {
+      if (quantity > 1) {
+        quantity -= 1;
+        updateQuantity();
+      }
+    });
+
+    increaseButton.addEventListener("click", () => {
+      if (quantity < 99) {
+        quantity += 1;
+        updateQuantity();
+      }
+    });
+
+    const productData = document.getElementById("product").dataset;
+    const orderButton = document.getElementById("orderButton");
+    const orderMessage = document.getElementById("orderMessage");
+
+    function showOrderError(message) {
+      orderMessage.textContent = message;
+      orderMessage.style.color = "#a12626";
+    }
+
+    function createOrderEmail(selectedSize) {
+      const productName = productData.name;
+      const unitPrice = Number(productData.price);
+      const totalPrice = unitPrice * quantity;
+
+      const subject = `Order Request - ${productName}`;
+
+      const body = [
+        "Hello YORE,",
+        "",
+        "I would like to place an order with the following details:",
+        "",
+        `Product: ${productName}`,
+        `Color: ${productData.color}`,
+        `Fit: ${productData.fit}`,
+        `Size: ${selectedSize}`,
+        `Quantity: ${quantity}`,
+        `Unit Price: PHP ${unitPrice}`,
+        `Estimated Total: PHP ${totalPrice}`,
+        "",
+        "Please let me know the next steps. Thank you!"
+      ].join("\n");
+
+      const recipient = "orders@examplewebsite142.com";
+
+      return (
+        `mailto:${recipient}` +
+        `?subject=${encodeURIComponent(subject)}` +
+        `&body=${encodeURIComponent(body)}`
+      );
+    }
+
+    function handleOrder() {
+      const selectedSize = document.querySelector('input[name="size"]:checked');
+
+      if (!selectedSize) {
+        showOrderError("Please choose a size before placing your order.");
+        document.querySelector('input[name="size"]').focus();
+        return;
+      }
+
+      orderMessage.textContent = "";
+      orderMessage.style.color = "";
+
+      window.location.href = createOrderEmail(selectedSize.value);
+    }
+
+    orderButton.addEventListener("click", handleOrder);
+  </script>
+</body>
+</html>
