@@ -59,11 +59,11 @@ https://www.figma.com/design/yXRS2xPZE6Xb48h2wAg0TB/YORE---MMS-142-Assignment-2?
 
 ## Team Members
 
-- Tonic, Eric Jhon D. 
+- Gatdula, Rein G.
 - Judavar, Emmanuel James B.
 - Santos, Roberto Jose S.
 - Soriano, Andrea Bernadette M.
-- Gatdula, Rein G.
+- Tonic, Eric Jhon D.
 
 ## Academic Information
 
