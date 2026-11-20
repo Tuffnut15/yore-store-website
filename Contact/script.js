@@ -69,8 +69,6 @@ contactForm.addEventListener("submit", (event) => {
     "Press send there to finish. If nothing opened, use the button below.";
   reopenEmail.href = mailtoLink;
   sentModal.show();
-
-  window.location.href = mailtoLink;
 });
 
 sentModalElement.addEventListener("hidden.bs.modal", () => {
