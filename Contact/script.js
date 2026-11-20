@@ -65,8 +65,8 @@ contactForm.addEventListener("submit", (event) => {
   const mailtoLink = createMailtoLink(name, email, subject, message);
 
   sentModalText.textContent =
-    "Thanks, " + name + "! Your email app should open with your message ready. " +
-    "Press send there to finish. If nothing opened, use the button below.";
+    "Thanks, " + name + "! Your message is ready. " +
+    "Click the button below to open your email app, then press Send to submit your message.";
   reopenEmail.href = mailtoLink;
   sentModal.show();
 });
