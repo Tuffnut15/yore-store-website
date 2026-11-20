@@ -55,7 +55,7 @@ https://tuffnut15.github.io/yore-store-website/
 
 ## Design Reference
 
-[Figma link]
+https://www.figma.com/design/yXRS2xPZE6Xb48h2wAg0TB/YORE---MMS-142-Assignment-2?node-id=6-411&t=0bLTAQzyYIc8ckH2-1
 
 ## Team Members
 
