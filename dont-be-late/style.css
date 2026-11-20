@@ -12,7 +12,6 @@
   --accent-font: "Kalam", cursive;
 }
 
-/* ===== Base ===== */
 body {
   min-height: 100vh;
   display: flex;
@@ -42,7 +41,6 @@ a:hover { color: inherit; }
 
 section[id] { scroll-margin-top: 90px; }
 
-/* ===== Buttons ===== */
 .btn-yore {
   --bs-btn-padding-x: 2rem;
   --bs-btn-padding-y: .8rem;
@@ -591,3 +589,39 @@ section[id] { scroll-margin-top: 90px; }
   object-fit: cover !important;
   object-position: center !important;
 }
+
+.shirts-modal {
+  border: 0;
+  border-radius: 20px;
+  background: var(--page);
+}
+.shirts-modal .modal-header { border-bottom: 0; padding: 20px 24px 8px; }
+.shirts-modal .modal-title { margin: 0; font-size: 1.5rem; font-weight: 800; }
+.shirts-modal .modal-body { display: grid; gap: 12px; padding: 8px 24px 24px; }
+
+.shirt-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: transform .2s ease, border-color .2s ease;
+}
+.shirt-option:hover { transform: translateY(-2px); border-color: var(--green); }
+
+.shirt-thumb {
+  flex: 0 0 72px;
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #e5eee1;
+}
+.shirt-thumb img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+.shirt-meta { flex: 1; }
+.shirt-meta strong { display: block; color: var(--green); font-family: var(--heading-font); font-size: 1.1rem; }
+.shirt-meta small { color: #727b73; font-size: .8rem; }
+.shirt-arrow { color: var(--green); font-size: 1.2rem; font-weight: 800; }
