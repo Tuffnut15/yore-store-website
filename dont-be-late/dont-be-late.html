@@ -130,13 +130,14 @@
 
             <div class="product-actions d-flex flex-wrap gap-3">
               <button type="button" class="btn btn-yore btn-yore-dark rounded-pill" id="orderButton">Order now</button>
-              <a class="btn btn-yore btn-yore-light rounded-pill" href="index.html#shop">
-                <svg class="btn-icon" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24"
-                     fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
-                  <path d="M8 3 3 6l2 4 3-1v12h8V9l3 1 2-4-5-3a4 4 0 0 1-8 0Z"/>
-                </svg>
-                View other shirts →
-              </a>
+              <button type="button" class="btn btn-yore btn-yore-light rounded-pill"
+                      data-bs-toggle="modal" data-bs-target="#otherShirtsModal">
+              <svg class="btn-icon" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+                <path d="M8 3 3 6l2 4 3-1v12h8V9l3 1 2-4-5-3a4 4 0 0 1-8 0Z"/>
+              </svg>
+              View other shirts →
+              </button>
             </div>
 
             <p class="product-note">No payment gateway — order availability by email.</p>
@@ -155,6 +156,39 @@
       </section>
     </div>
   </main>
+
+  <div class="modal fade" id="otherShirtsModal" tabindex="-1"
+     aria-labelledby="otherShirtsTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content shirts-modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="otherShirtsTitle">More from YORE</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <a class="shirt-option" href="everyday-comfort.html">
+          <span class="shirt-thumb"><img src="images/comfort-tee.png" alt=""></span>
+          <span class="shirt-meta">
+            <strong>Comfort Tee</strong>
+            <small>₱499</small>
+          </span>
+          <span class="shirt-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a class="shirt-option" href="do-good-work.html">
+          <span class="shirt-thumb"><img src="images/do-good-work-tee.png" alt=""></span>
+          <span class="shirt-meta">
+            <strong>Do Good Work Tee</strong>
+            <small>₱499</small>
+          </span>
+          <span class="shirt-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
   <footer class="site-footer">
     <div class="container footer-inner">
