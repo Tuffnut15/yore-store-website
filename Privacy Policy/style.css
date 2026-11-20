@@ -1,0 +1,293 @@
+
+
+:root {
+  /* Brand kit palette */
+  --green: #244b35;            /* Dark green · primary */
+  --green-dark: #183b28;
+  --green-button: #b6d3a7;     /* Pastel gray green */
+  --page: #f5f3f0;             /* Light yellow · background */
+  --sand: #d9c9b4;             /* Pastel gray orange */
+  --dark-gray: #333333;        /* Text */
+
+  --border: #e4e5df;
+  --sage: #e6eee1;             /* Soft green panel tint */
+  --line: #dde1d9;             /* Divider lines */
+
+  /* Brand kit fonts */
+  --heading-font: "Baloo 2", sans-serif;
+  --body-font: "Poppins", sans-serif;
+  --accent-font: "Kalam", cursive;
+}
+
+/* ===== Base ===== */
+html { scroll-behavior: smooth; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--page);
+  color: var(--dark-gray);
+  font-family: var(--body-font);
+  -webkit-font-smoothing: antialiased;
+}
+main { flex: 1; }
+
+h1, h2, h3 {
+  font-family: var(--heading-font);
+  color: var(--green);
+  font-weight: 700;
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { color: inherit; }
+
+.container {
+  width: 92%;
+  max-width: 1450px;
+  padding-inline: 0;
+}
+
+:focus-visible { outline: 3px solid #6f9a75; outline-offset: 3px; }
+
+/* ===== Buttons ===== */
+.btn-yore {
+  --bs-btn-padding-x: 2rem;
+  --bs-btn-padding-y: .8rem;
+  --bs-btn-font-size: 1rem;
+  --bs-btn-font-weight: 700;
+  --bs-btn-focus-shadow-rgb: 36, 75, 53;
+  min-height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-yore:hover { transform: translateY(-2px); }
+.btn-yore-dark {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--green);
+  --bs-btn-border-color: var(--green);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--green-dark);
+  --bs-btn-hover-border-color: var(--green-dark);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--green-dark);
+  --bs-btn-active-border-color: var(--green-dark);
+}
+
+/* ===== Header ===== */
+.site-header {
+  height: 80px;
+  background: #ffffff;
+  border-bottom: 1px solid #d8ddd5;
+}
+.site-header .navbar {
+  height: 100%;
+  padding: 0;
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23244b35' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.site-header .navbar > .container { height: 100%; }
+.site-header .navbar-brand { padding: 0; margin: 0; display: inline-flex; }
+.site-header .navbar-brand img { display: block; height: 56px; width: auto; max-width: none; }
+
+.site-header .navbar-toggler { border: 0; padding: 8px; }
+.site-header .navbar-toggler:focus { box-shadow: none; }
+
+.site-header .nav-link {
+  color: #353b37;
+  font-size: 15px;
+  transition: color .2s ease;
+}
+.site-header .nav-link:hover,
+.site-header .nav-link.active { color: var(--green); font-weight: 800; }
+
+@media (min-width: 768px) {
+  .site-header .navbar-nav { gap: 38px; align-items: center; }
+  .site-header .nav-link { padding: 0; }
+}
+
+@media (max-width: 767.98px) {
+  .site-header { height: 68px; }
+  .site-header .navbar-brand img { height: 44px; }
+  .container { width: calc(100% - 32px); }
+
+  .site-header .offcanvas {
+    --bs-offcanvas-width: min(82vw, 390px);
+    --bs-offcanvas-bg: var(--page);
+    box-shadow: -8px 0 28px rgba(0, 0, 0, .08);
+  }
+  .site-header .offcanvas-header { padding: 18px 20px 32px; }
+  .site-header .offcanvas-header .btn-close { margin: 0; }
+  .site-header .offcanvas-body { padding: 0 20px; }
+  .site-header .navbar-nav { gap: 2px; }
+  .site-header .nav-link {
+    padding: 13px 17px;
+    border-radius: 28px;
+    color: var(--green);
+    font-size: 15px;
+    font-weight: 800;
+  }
+  .site-header .nav-link.active { background: var(--green); color: #fff; }
+}
+.drawer-tagline {
+  margin: 20px 4px;
+  padding-top: 14px;
+  border-top: 1px solid #deded5;
+  color: #9a9c94;
+  font-size: 8px;
+  letter-spacing: .2px;
+}
+
+/* ===== Footer ===== */
+.site-footer { min-height: 115px; background: var(--green); color: #fff; }
+.footer-inner { min-height: 115px; display: flex; align-items: center; justify-content: space-between; }
+.footer-logo { display: inline-flex; }
+.footer-logo img { display: block; height: 56px; width: auto; }
+.footer-brand small { display: block; margin-top: 12px; color: #d7e1d8; font-size: 12px; }
+.footer-links { display: grid; grid-template-columns: repeat(3, auto); gap: 10px 44px; color: #e5ece6; font-size: 14px; }
+.footer-links a:hover { text-decoration: underline; }
+
+@media (max-width: 767.98px) {
+  .site-footer, .footer-inner { min-height: 90px; }
+  .footer-logo img { height: 44px; }
+  .footer-brand small { margin-top: 8px; font-size: 11px; }
+  .footer-links { grid-template-columns: repeat(2, auto); gap: 8px 32px; font-size: 13px; }
+}
+
+@media (max-width: 380px) {
+  .container { width: calc(100% - 24px); }
+}
+
+/* =====================================================
+   Policies page
+   ===================================================== */
+.policy-page { padding: 56px 0 72px; }
+
+.policy-header,
+.policy-section { scroll-margin-top: 100px; }
+
+.policy-header { margin-bottom: 22px; }
+.policy-eyebrow {
+  margin: 0 0 14px;
+  color: var(--dark-gray);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+.policy-title {
+  margin: 0;
+  color: var(--green);
+  font-size: clamp(2.2rem, 3.6vw, 2.9rem);
+  font-weight: 800;
+  line-height: 1.08;
+}
+.policy-subtitle { margin: 4px 0 0; color: #6b736d; font-size: .95rem; }
+
+/* Main white card */
+.policy-card {
+  padding: 24px 28px 28px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+}
+
+/* Soft green welcome bar */
+.policy-intro {
+  margin-bottom: 22px;
+  padding: 11px 18px;
+  border-radius: 10px;
+  background: var(--sage);
+  color: #3d453f;
+  font-size: .78rem;
+  line-height: 1.5;
+}
+.policy-intro strong { display: block; color: var(--dark-gray); font-weight: 700; }
+
+/* Two-column numbered grid */
+.policy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 48px;
+}
+.policy-col { min-width: 0; }
+
+.policy-item {
+  display: grid;
+  grid-template-columns: 29px 1fr;
+  align-items: start;
+  padding: 14px 0 16px;
+  border-bottom: 1px solid var(--line);
+}
+.policy-col .policy-item:last-child { border-bottom: 0; }
+.policy-item:first-child { padding-top: 6px; }
+
+.policy-num {
+  padding-top: .38rem;
+  color: var(--green);
+  font-size: .66rem;
+  font-weight: 800;
+}
+.policy-item h3 {
+  margin: 0 0 3px;
+  color: var(--green);
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+.policy-item p {
+  margin: 0;
+  color: #555c57;
+  font-size: .78rem;
+  line-height: 1.6;
+}
+
+/* Privacy section (inside the same card) */
+.policy-section {
+  margin-top: 26px;
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+}
+.policy-section-title {
+  margin: 0;
+  color: var(--green);
+  font-size: 1.65rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+.policy-section-sub { margin: 4px 0 14px; color: #6b736d; font-size: .82rem; }
+
+/* Contact bar */
+.policy-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px 24px;
+  margin-top: 28px;
+  padding: 24px 28px;
+  border-radius: 12px;
+  background: var(--sage);
+}
+.policy-cta h2 { margin: 0 0 2px; color: var(--green); font-size: 1.3rem; font-weight: 800; }
+.policy-cta p { margin: 0; color: #4b524d; font-size: .78rem; }
+.policy-cta .btn-yore {
+  --bs-btn-padding-x: 1.7rem;
+  --bs-btn-padding-y: .45rem;
+  --bs-btn-font-size: .78rem;
+  min-height: 38px;
+}
+
+/* ===== Tablet / mobile ===== */
+@media (max-width: 991.98px) {
+  .policy-grid { grid-template-columns: 1fr; }
+  .policy-col:first-child .policy-item:last-child { border-bottom: 1px solid var(--line); }
+}
+
+@media (max-width: 767.98px) {
+  .policy-page { padding: 28px 0 44px; }
+  .policy-card { padding: 16px 16px 20px; border-radius: 18px; }
+  .policy-section-title { font-size: 1.4rem; }
+  .policy-cta { flex-direction: column; align-items: flex-start; padding: 18px; }
+  .policy-cta .btn-yore { width: 100%; }
+  .policy-cta h2 { font-size: 1.15rem; }
+}
